@@ -1,7 +1,7 @@
 Title         : Michigan Komonjo Workshop Week 2
 
-[INCLUDE="../../Madoko/MyStyle_Master/MyStyle.mdk":Style]
-[INCLUDE="../../1 智顗『摩訶止観』/HSKYStyle":HSKYStyle]
+[INCLUDE="MyStyle.mdk":Style]
+[INCLUDE="HSKYStyle.mdk":HSKYStyle]
 
 parallel-brackets-shortcut: False
 

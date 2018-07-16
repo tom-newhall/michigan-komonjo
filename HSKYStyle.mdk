@@ -1,0 +1,249 @@
+Title: The (Modified) _Hasshū kōyō_ Style File
+
+[TITLE]
+
+``` css {.pretty}
+
+-- BEGIN:HSKYStyle
+
+Doc class     : [10pt]article
+Package       : marginnote
+
+
+<!--- Bibliography setup -->
+
+Bib           : ../Hasshū Kōyō 八宗綱要.bib
+bibtex        : True
+CSL Style     : ../../../Madoko/MyStyle_Master/MyCSLStyle/chicago-fullnote-bibliography_edited.csl
+cite style    : natural
+
+
+<!--- Misc. Madoko features -->
+
+Line No: 1000
+percent_comments: False
+parallel-brackets-shortcut: False
+
+.noindent{tex-cmd-inner:"{}{";}
+
+
+<!--- Extra font setup -->
+  
+CJK_main_Font : KozMinPro-ExtraLight
+Chinese_font  : HanWangMingMediumChuIn
+
+
+
+<!-- Tex Header    : \setCJKfallbackfamilyfont{\chinese}{&CJKFallBack_Font;} -->
+
+<!--- Editing Mode -->
+
+<!--- For whatever reason this line was fucking things up, so I had to turn it off, but I guess it should normally be on
+notes { display: True;  }
+-->
+
+@if not Editing_Mode  { .sidenote { display : none; }
+                        notes     { display : none; } 
+                        Chinese_font  : STFangsong   }
+
+<!-- Translation Only Mode -->
+
+@if translation_only  {
+                        kundoku     { display : none; }
+                        genbun_body { display : none; }
+                        .marginnote { display : none; }  }
+
+<!--- Ruby Text Size setup for css and tex-->
+
+Tex Header    : \newCJKfontfamily{\chinese}[Scale=MatchLowercase,Mapping=tex-text,RawFeature={vertical},BoldFont="&CJK_sans_font;"]{&Chinese_Font;}
+
+
+.rt{font-size:"6pt";}
+
+rubysep       : -5pt
+rubysize      : 0.5
+
+
+<!--- Header and TOC Styling -->
+
+Heading base     : 2
+heading depth    : 4
+heading format   : § &label;&heading-endperiod;&emsp;
+Toc Depth        : 4
+
+h1 { -;
+    toc-line  : "&source;"; }
+h2 { @h2:arabic;
+    Label     : "@h1-h2"; }
+h3 { @h2-h3; 
+    Label     : "@h1-h2.@h1-h2-h3"; }
+h4 { @h2-h3-h4;
+      Label   : "@h1-h2.@h1-h2-h3.@h2-h3-h4"; }
+
+H3, H4, H5, H6 { tex-cmd:"\subsubsection" }
+
+.section-labels { font-weight:"bold"; }
+
+
+<!--- Make Bibliography appears as raw text -->
+
+bibliography { before : "```` &nl;";
+                after : "&nl;````&nl;" }
+
+<!-- the Gyonen unit enables parallel sections to be marked off by abbreviated headings-->
+<!--  This is the original version replace:"/^【原】(.+$\n+)^【訓】(.+$\n+)^(.+$)/~ begin genbun&nl;\1~end genbun&nl;&nl;~ begin kundoku&nl;\2&nl;~ end kundoku&nl;&nl;~ begin translation&nl;\3&nl;~ end translation&nl;/gm"; , which doesn't require the translation to be tagged "trans:" but forces you to make the translations according to this particular order. Don't know which I prefer. -->
+
+<!--- Body Replacements -->
+
+body{ replace : "/^【原文?】(\n(.+\n)+^$)^/\
+                ~ begin genbun-wo-header &nl;\
+                \1 &nl;\
+                ~ end genbun-wo-header &nl;\
+                /gm"  ;
+                
+      replace : "/^【原文?】(.+)(\n(.+\n)+^$)^/\
+                ~ begin genbun &nl;\
+                [\1]{.text-heading;} &nl;\
+                ~~ begin genbun_body &nl;\
+                \2 &nl;\
+                ~~ end genbun_body &nl;\
+                ~ end genbun &nl;\
+                /gm"  ;
+                
+      replace : "/^【訓読?】((.*\n)(.+\n)+^$)^/\
+                ~ begin kundoku &nl;\
+                \1 &nl;\
+                ~ end kundoku &nl;\
+                /gm"  ;
+                
+      replace : "/^【.+?訳】((.*\n)(.+\n)+^$)^/\
+                ~ begin translation &nl;\
+                \1 &nl;\
+                ~ end translation &nl;\
+                /gm"  ;
+                
+      replace : "/<<(.*?)>>/\
+                [\1]{.toriaezu-warichu}/g"  ; }
+
+<!--- Body Styling -->
+
+body {  css-width         : 79%;
+        css-padding-left  : 10%;
+        css-padding-right : 10%; }
+
+text-heading {  tex-cmd    : "\textsf"  ;
+                css-font-weight   : "bold";
+                font-size         : "12pt";
+                text-indent       : -1em;
+                padding-top       : 0em;
+                margin-bottom     : 0em;
+                tex-margin-top    : 0em;
+                padding-bottom    : 0em;
+                display           : block;
+                tight             : true; 
+                css-after         : "&nl;&nl;";}
+
+.marginnote { tex-cmd-before  : "\reversemarginpar\marginnote{";
+              tex-cmd-after   : "}";
+              font-size       : 10pt;
+              css-float       : left;
+              css-text-indent : -5em; }
+
+.sidenote {   replace         : "/; /&br;/g";
+              tex-cmd-before  : "\normalmarginpar\marginnote{";
+              tex-cmd-after   : "}";
+              css-text-align  : left;
+              css-float       : right;
+              css-max-width   : 5em;
+              css-margin-right: -6em;
+              css-font-weight : normal;
+              font-size       : 10pt;
+              font-family     : "&main_font;";
+              css-color       : darkblue; 
+              css-line-height : 1.2em;
+              css-vertical-align: baseline;
+              css-position    : relative; }
+
+genbun, genbun-wo-header, kundoku, translation {  font-size     :"12pt"   ;
+                                                  margin-left   : 1em     ;
+                                                  margin-bottom : 0em     ;
+                                                  padding-top   : 0em     ;
+                                                  padding-bottom: 1em     ;
+                                                  css-text-indent   : -1em     ;
+                                                  text-justify  : inter-ideographic;
+                                                  tight         : true    ; 
+                                                  breakable: False;
+                                                }
+
+genbun, genbun-wo-header, kundoku {  }
+
+
+
+genbun, genbun-wo-header{  css-background-color  : DarkSeaGreen;
+                          css-font-family       : "&Chinese_font;";
+                          //tex-cmd               : "\setlength{\baselineskip}{2em}";  
+                          css-line-height       : 1.5em; }
+
+
+genbun-wo-header {  before: "[【原文】]{.text-heading}";  }
+
+
+kundoku { before                : "[【訓読】]{.text-heading}";
+          css-background-color  : hsl(120, 25%, 85%);
+          //tex-cmd               : "\setlength{\baselineskip}{2.5em}";  
+          css-line-height       : 1.5em;   }
+
+
+translation { before                : "[【現代誤訳】]{.text-heading}";
+              css-background-color  : lightblue; 
+              //tex-cmd               : "\setlength{\baselineskip}{2em}";  
+              css-line-height       : 1.5em;   }
+
+<!-- //replace     : "/^(\S.*?:)\n(([ 　]{1,3}\S.+\n)+)/ ~ begin a_note &nl; [\1]{.headword} \2 &nl; ~ end a_note &nl;/gm";        //replace     : "/^(\S.*?:)\n\n/[　 　　\1]{.headword}/gm"; -->
+        
+
+Notes {
+        before:"[【語釈】]{.text-heading, margin-left: -1em;}&nl;";
+        margin-left: 2em; }
+
+<!--           //replace: "/^[ 　]{1,3}(.+\n)$/\1/gm"; -->
+        
+a_note {  padding-left    : 1em;
+          margin-left     : -1em;
+          css-background  : lightsalmon;  
+          margin-top      : 3ex;  }
+
+.headword { css-font-family : "Noto Sans"         ;
+            css-font-weight : "bold"              ;
+            tex-cmd-before  : "\textsf{\textbf{"  ;
+            tex-cmd-after   : "}}"                ;
+            margin-left     : -1em                ;
+            css-color       : Purple              ;
+            tight           : true                ; }
+
+.toriaezu-warichu { font-size: 75%; }
+    
+my_comment  { margin-top: 3ex;
+              margin-bottom: 3ex; }
+
+dl {  css-background  : &verylightsalmon;; }
+
+dt  { display                   : inline                  ; 
+      css-font-family           : "Noto Sans"             ;
+      css-font-weight           : "bold"                  ;
+      tex-cmd                   : "\textsf"               ;
+      tex-cmd-outer-before      : "&nl;&nl;" ;
+      tex-cmd-inner-before      : "{}{"                   ;
+      tex-cmd-inner-after       : "\ "                    ;
+      margin-top                :  0em                    ;
+      margin-left               : -1em                    ;
+      css-margin-left           : 0em                     ;
+      //margin-bottom           : 1em                     ; }
+
+dd  {  tag     : false      ;
+      after   : "&nl;&nl;"  ;
+      display :  inline      ; }
+
+-- END:HSKYStyle
+
+```
