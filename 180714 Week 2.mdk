@@ -3,10 +3,9 @@ Title         : Michigan Komonjo Workshop Week 2
 [INCLUDE="MyStyle.mdk":Style]
 [INCLUDE="HSKYStyle.mdk":HSKYStyle]
 
-parallel-brackets-shortcut: False
 
-cjk_sans_font : NotoSansCJKjp-Regular
-cjk_main_font : KozMinPro-Light
+cjk_sans_font : "NotoSansCJKjp-Regular", "MS-PGothic"
+cjk_main_font : "KozMinPro-Light", "MS-PMincho"
 
 <!-- Kozuka Mincho Pro L , NotoSerifCJKjp-Regular, MS-PGothic-->
 
@@ -18,8 +17,8 @@ editing_mode: True
 [TITLE]
 [TOC]
 
-19，築城と呪術者＝『甲陽軍鑑』永禄一二年七月（一五六九年八月二三日）条
-=====================================================================
+19. 築城と呪術者＝『甲陽軍鑑』永禄一二年七月（一五六九年八月二三日）条
+=======================================================
 
 【原文】
 　判兵庫星占之事　<<付>>長坂長閑無面目仕合之事\

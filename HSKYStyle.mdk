@@ -135,6 +135,7 @@ text-heading {  tex-cmd    : "\textsf"  ;
                 css-font-weight   : "bold";
                 font-size         : "12pt";
                 text-indent       : -1em;
+                css-text-indent   : 0em;
                 padding-top       : 0em;
                 margin-bottom     : 0em;
                 tex-margin-top    : 0em;

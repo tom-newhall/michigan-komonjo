@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.1.6" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <title>Michigan Komonjo Workshop Week 2</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote { 
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013"; 
+      position: absolute;
+      margin-left: -1em; 
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    text-align: left;
+    white-space: pre;
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {  
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;  
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 { 
+    margin-top: 1.22em; 
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  { 
+    margin-top: 1ex;    
+  }
+  .madoko h5, .madoko h6 { 
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 { 
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 { 
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt, 
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;    
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="font-family:&quot;Linux Libertine O&quot;, &quot;&quot;KozMinPro-Light&quot;, &quot;MS-PMincho&quot;&quot;, &quot;MS Mincho&quot;, HanaMinA;width:79%;padding-left:10%;padding-right:10%;line-adjust:0">
+
+<div class="titleblock align-center para-block" data-line="1016" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" data-line="1016" style="text-align:center;line-adjust:0">
+<div class="title para-block" data-line="1016" style="font-size:xx-large;font-weight:bold;margin-bottom:0.5ex;line-adjust:0"><span data-line="1016"></span>Michigan Komonjo Workshop Week 2</div></div></div><span data-line="1017"></span>
+<nav class="toc toc-contents"><h2 id="sec-contents" class="clearnum h1 heading-contents" data-heading-depth="1" style="display:block">Contents</h2>
+<div class="tocblock tocblock1">
+<div class="tocitem tocitem1" data-toc-target-elem="h1" data-toc-target="sec-19-" data-toc-depth="1" data-toc-line="19. \u7BC9\u57CE\u3068\u546A\u8853\u8005\uFF1D\u300E\u7532\u967D\u8ECD\u9451\u300F\u6C38\u7984\u4E00\u4E8C\u5E74\u4E03\u6708\uFF08\u4E00\u4E94\u516D\u4E5D\u5E74\u516B\u6708\u4E8C\u4E09\u65E5\uFF09\u6761" style="toctarget:sec-19-"><a href="#sec-19-" class="localref">19. 築城と呪術者＝『甲陽軍鑑』永禄一二年七月（一五六九年八月二三日）条</a></div></div></nav><h2 id="sec-19-" class="h1 clearnum" data-line="1019" data-heading-depth="1" style="display:block"><span data-line="1019"></span>19. 築城と呪術者＝『甲陽軍鑑』永禄一二年七月（一五六九年八月二三日）条</h2>
+<div class="genbun-wo-header" data-line="1022" style="font-size:12pt;margin-left:1em;margin-bottom:0em;padding-top:0em;padding-bottom:1em;text-indent:-1em;text-justify:inter-ideographic;breakable:False;background-color:DarkSeaGreen;font-family:HanWangMingMediumChuIn;line-height:1.5em"><span data-line="1023"></span><span class="text-heading" style="font-weight:bold;font-size:12pt;text-indent:-1em;text-indent:0em;padding-top:0em;margin-bottom:0em;padding-bottom:0em;display:block;after:\A \A ">【原文】</span><span data-line="1023"></span>
+　判兵庫星占之事　<span data-line="1024"></span><span class="toriaezu-warichu" style="font-size:75%">付</span><span data-line="1024"></span>長坂長閑無面目仕合之事<span data-line="1024"></span><br>
+<span data-line="1025"></span><br>
+<span data-line="1026"></span>一　永禄十二年己巳の歳より翌年午七月まて天に烟の出る星、出たり。
+信玄公三十一歳の御時より召置るゝ江州石寺の博士昔ノ晴明が流れにて易者也。
+中にも判を能占によつて判の兵庫と号す。
+占をも正法に仕、内典外典ともに<span data-line="1029"></span><br>
+<span data-line="1030"></span>たづさハり、邪気聊もなければ、信州水内ノ郡にをひて、百貫の知行、永代宛行るゝ朱印彼兵庫に被成下此兵庫を毘沙門堂のくりまで召よせらる武藤三河守下曽根両人を問者にて右の客星吉凶を兵庫に占せて見給ふに謹占イ則書ヲ以テ言上す抑此星と申は天下怪異の客星也雖然今時に当て何の大名に悪事に可有之あらず於末代吾朝の古高家次第に滅して終悉く無成給ひ武道国中の武家の作法を取失昨日下人かと見れば今日は主と成女が男の出立を仕り新家のだち
+ </div>
+<div class="kundoku" data-line="1034" style="font-size:12pt;margin-left:1em;margin-bottom:0em;padding-top:0em;padding-bottom:1em;text-indent:-1em;text-justify:inter-ideographic;breakable:False;background-color:hsl(120, 25%, 85%);line-height:1.5em"><span data-line="1035"></span><span class="text-heading" style="font-weight:bold;font-size:12pt;text-indent:-1em;text-indent:0em;padding-top:0em;margin-bottom:0em;padding-bottom:0em;display:block;after:\A \A ">【訓読】</span><span data-line="1035"></span>
+<span data-line="1036"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">兵<rt class="ruby-text">ひょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">庫<rt class="ruby-text">ご</rt></ruby></span></span></span><span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">星<rt class="ruby-text">ほし</rt></ruby></span><span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">占<rt class="ruby-text">うらな</rt></ruby></span><span data-line="1036"></span>いを<span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">判<rt class="ruby-text">はん</rt></ruby></span><span data-line="1036"></span>ずる<span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">之<rt class="ruby-text">の</rt></ruby></span><span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">事<rt class="ruby-text">こと</rt></ruby></span><span data-line="1036"></span>　<span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">付<rt class="ruby-text">ふ</rt></ruby></span><span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">長坂<rt class="ruby-text">ながさか</rt></ruby></span><span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">長閑<rt class="ruby-text">のどか</rt></ruby></span><span data-line="1036"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">無<rt class="ruby-text">む</rt></ruby></span><span class="rubies"><ruby class="base-kanji">面<rt class="ruby-text">めん</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">目<rt class="ruby-text">もく</rt></ruby></span></span></span><span data-line="1036"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">仕<rt class="ruby-text">し</rt></ruby></span><span class="rubies"><ruby class="base-kanji">合<rt class="ruby-text">あい</rt></ruby></span></span></span><span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">之<rt class="ruby-text">の</rt></ruby></span><span data-line="1036"></span><span class="rubies"><ruby class="base-kanji">事<rt class="ruby-text">こと</rt></ruby></span><span data-line="1036"></span>
+<span data-line="1037"></span><br>
+<span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">一<rt class="ruby-text">ひとつ</rt></ruby></span><span data-line="1038"></span>　<span data-line="1038"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">永<rt class="ruby-text">えい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">禄<rt class="ruby-text">ろく</rt></ruby></span></span></span><span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">十二年己巳<rt class="ruby-text">つちのとのみ</rt></ruby></span><span data-line="1038"></span>の<span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">歳<rt class="ruby-text">とし</rt></ruby></span><span data-line="1038"></span>より<span data-line="1038"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">翌<rt class="ruby-text">よこ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">年<rt class="ruby-text">ねん</rt></ruby></span></span></span><span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">午<rt class="ruby-text">うま</rt></ruby></span><span data-line="1038"></span>七月<span data-line="1038"></span><span class="highlight" style="background-color:yellow">まて</span><span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">天<rt class="ruby-text">あま</rt></ruby></span><span data-line="1038"></span>に<span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">烟<rt class="ruby-text">けむり</rt></ruby></span><span data-line="1038"></span>の<span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">出<rt class="ruby-text">で</rt></ruby></span><span data-line="1038"></span>る<span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">星<rt class="ruby-text">ほし</rt></ruby></span><span data-line="1038"></span>、<span data-line="1038"></span><span class="rubies"><ruby class="base-kanji">出<rt class="ruby-text">で</rt></ruby></span><span data-line="1038"></span>たり。
+<span data-line="1039"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">信<rt class="ruby-text">しん</rt></ruby></span><span class="rubies"><ruby class="base-kanji">玄<rt class="ruby-text">げん</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">公<rt class="ruby-text">こう</rt></ruby></span></span></span><span data-line="1039"></span>三十一<span data-line="1039"></span><span class="rubies"><ruby class="base-kanji">歳<rt class="ruby-text">さい</rt></ruby></span><span data-line="1039"></span>の<span data-line="1039"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">御<rt class="ruby-text">ご</rt></ruby></span><span class="rubies"><ruby class="base-kanji">時<rt class="ruby-text">じ</rt></ruby></span></span></span><span data-line="1039"></span>より<span data-line="1039"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">召<rt class="ruby-text">めし</rt></ruby></span><span class="rubies"><ruby class="base-kanji">置<rt class="ruby-text">おか</rt></ruby></span></span></span><span data-line="1039"></span>るる<span data-line="1039"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">江<rt class="ruby-text">こう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">州<rt class="ruby-text">しゅう</rt></ruby></span></span></span><span data-line="1039"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">石<rt class="ruby-text">いし</rt></ruby></span><span class="rubies"><ruby class="base-kanji">寺<rt class="ruby-text">でら</rt></ruby></span></span></span><span data-line="1039"></span>の<span data-line="1039"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">博<rt class="ruby-text">はか</rt></ruby></span><span class="rubies"><ruby class="base-kanji">士<rt class="ruby-text">せ</rt></ruby></span></span></span><span data-line="1039"></span>。
+<span data-line="1040"></span><span class="rubies"><ruby class="base-kanji">昔<rt class="ruby-text">むかし</rt></ruby></span><span data-line="1040"></span>の<span data-line="1040"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">晴<rt class="ruby-text">せい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">明<rt class="ruby-text">めい</rt></ruby></span></span></span><span data-line="1040"></span>が<span data-line="1040"></span><span class="rubies"><ruby class="base-kanji">流<rt class="ruby-text">なが</rt></ruby></span><span data-line="1040"></span>れにて<span data-line="1040"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">易<rt class="ruby-text">えき</rt></ruby></span><span class="rubies"><ruby class="base-kanji">者<rt class="ruby-text">しゃ</rt></ruby></span></span></span><span data-line="1040"></span><span class="rubies"><ruby class="base-kanji">也<rt class="ruby-text">なり</rt></ruby></span><span data-line="1040"></span>。
+<span data-line="1041"></span><span class="rubies"><ruby class="base-kanji">中<rt class="ruby-text">なか</rt></ruby></span><span data-line="1041"></span>にも<span data-line="1041"></span><span class="rubies"><ruby class="base-kanji">判<rt class="ruby-text">はん</rt></ruby></span><span data-line="1041"></span>を<span data-line="1041"></span><span class="rubies"><ruby class="base-kanji">能<rt class="ruby-text">よ</rt></ruby></span><span data-line="1041"></span>く<span data-line="1041"></span><span class="rubies"><ruby class="base-kanji">占<rt class="ruby-text">せん</rt></ruby></span><span data-line="1041"></span>によって<span data-line="1041"></span><span class="rubies"><ruby class="base-kanji">判<rt class="ruby-text">はん</rt></ruby></span><span data-line="1041"></span>の<span data-line="1041"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">兵<rt class="ruby-text">ひょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">庫<rt class="ruby-text">ご</rt></ruby></span></span></span><span data-line="1041"></span>と<span data-line="1041"></span><span class="rubies"><ruby class="base-kanji">号<rt class="ruby-text">ごう</rt></ruby></span><span data-line="1041"></span>す。
+<span data-line="1042"></span><span class="rubies"><ruby class="base-kanji">占<rt class="ruby-text">せん</rt></ruby></span><span data-line="1042"></span>をも<span data-line="1042"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">正<rt class="ruby-text">しょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">法<rt class="ruby-text">ぼう</rt></ruby></span></span></span><span data-line="1042"></span>に<span data-line="1042"></span><span class="rubies"><ruby class="base-kanji">仕<rt class="ruby-text">つ</rt></ruby></span><span data-line="1042"></span>かえ、<span data-line="1042"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1042"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1042"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1042"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1042"></span><span class="underline" style="text-decoration:underline"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">内<rt class="ruby-text">ない</rt></ruby></span><span class="rubies"><ruby class="base-kanji">典<rt class="ruby-text">てん</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">外<rt class="ruby-text">げ</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">典<rt class="ruby-text">てん</rt></ruby></span></span></span></span><span data-line="1042"></span>ともに
+<span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline">たずさわり</span><span data-line="1043"></span>、<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">邪<rt class="ruby-text">ざ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">気<rt class="ruby-text">げ</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">聊<rt class="ruby-text">いささ</rt></ruby></span><span data-line="1043"></span>かもなければ、<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">信<rt class="ruby-text">しん</rt></ruby></span><span class="rubies"><ruby class="base-kanji">州<rt class="ruby-text">しゅう</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">水内<rt class="ruby-text">みのち</rt></ruby></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">郡<rt class="ruby-text">ごり</rt></ruby></span><span data-line="1043"></span>において<span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">百<rt class="ruby-text">ひゃっ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">貫<rt class="ruby-text">けん</rt></ruby></span></span></span></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">知<rt class="ruby-text">ち</rt></ruby></span><span class="rubies"><ruby class="base-kanji">行<rt class="ruby-text">ぎょう</rt></ruby></span></span></span></span><span data-line="1043"></span>、<span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">永<rt class="ruby-text">えい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">代<rt class="ruby-text">たい</rt></ruby></span></span></span></span><span data-line="1043"></span> <span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"></span><span data-line="1043"></span><span class="underline" style="text-decoration:underline"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">宛<rt class="ruby-text">あて</rt></ruby></span><span class="rubies"><ruby class="base-kanji">行<rt class="ruby-text">おこな</rt></ruby></span></span></span>わるる</span><span data-line="1043"></span>、<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">朱<rt class="ruby-text">しゅ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">印<rt class="ruby-text">いん</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">彼<rt class="ruby-text">か</rt></ruby></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">兵<rt class="ruby-text">ひょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">庫<rt class="ruby-text">ご</rt></ruby></span></span></span><span data-line="1043"></span>に<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">成<rt class="ruby-text">じょう</rt></ruby></span><span data-line="1043"></span>ぜるる<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">下<rt class="ruby-text">くだり</rt></ruby></span><span data-line="1043"></span>に<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">此<rt class="ruby-text">こ</rt></ruby></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">兵<rt class="ruby-text">ひょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">庫<rt class="ruby-text">ご</rt></ruby></span></span></span><span data-line="1043"></span>を<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">毘<rt class="ruby-text">び</rt></ruby></span><span class="rubies"><ruby class="base-kanji">沙<rt class="ruby-text">しゃ</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">門<rt class="ruby-text">もん</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">堂<rt class="ruby-text">ど</rt></ruby></span></span></span><span data-line="1043"></span>のくりまで<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">召<rt class="ruby-text">め</rt></ruby></span><span data-line="1043"></span>よせらる<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">武<rt class="ruby-text">む</rt></ruby></span><span class="rubies"><ruby class="base-kanji">藤<rt class="ruby-text">とう</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">三河<rt class="ruby-text">みかわ</rt></ruby></span><span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">守<rt class="ruby-text">もり</rt></ruby></span><span class="rubies"><ruby class="base-kanji">下<rt class="ruby-text">した</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">両<rt class="ruby-text">りょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">人<rt class="ruby-text">じん</rt></ruby></span></span></span><span data-line="1043"></span>を<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">問<rt class="ruby-text">もん</rt></ruby></span><span class="rubies"><ruby class="base-kanji">者<rt class="ruby-text">じゃ</rt></ruby></span></span></span><span data-line="1043"></span>にて<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">右<rt class="ruby-text">みぎ</rt></ruby></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">客<rt class="ruby-text">かく</rt></ruby></span><span class="rubies"><ruby class="base-kanji">星<rt class="ruby-text">せい</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">吉<rt class="ruby-text">き</rt></ruby></span><span class="rubies"><ruby class="base-kanji">凶<rt class="ruby-text">きょう</rt></ruby></span></span></span><span data-line="1043"></span>を<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">兵<rt class="ruby-text">ひょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">庫<rt class="ruby-text">ご</rt></ruby></span></span></span><span data-line="1043"></span>に<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">占<rt class="ruby-text">うらな</rt></ruby></span><span data-line="1043"></span>わせて<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">見<rt class="ruby-text">み</rt></ruby></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">給<rt class="ruby-text">たま</rt></ruby></span><span data-line="1043"></span>ふに<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">謹<rt class="ruby-text">つつし</rt></ruby></span><span data-line="1043"></span>んで<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">占<rt class="ruby-text">うらな</rt></ruby></span><span data-line="1043"></span>い<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">則<rt class="ruby-text">かわ</rt></ruby></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">書<rt class="ruby-text">しょ</rt></ruby></span><span data-line="1043"></span>を<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">以<rt class="ruby-text">も</rt></ruby></span><span data-line="1043"></span>て<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">言<rt class="ruby-text">いい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">上<rt class="ruby-text">のば</rt></ruby></span></span></span><span data-line="1043"></span>す＊<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">抑<rt class="ruby-text">そも</rt></ruby></span><span data-line="1043"></span>*<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">此<rt class="ruby-text">この</rt></ruby></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">星<rt class="ruby-text">ほし</rt></ruby></span><span data-line="1043"></span>と<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">申<rt class="ruby-text">さる</rt></ruby></span><span data-line="1043"></span>は<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">天<rt class="ruby-text">てん</rt></ruby></span><span class="rubies"><ruby class="base-kanji">下<rt class="ruby-text">か</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">怪<rt class="ruby-text">かい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">異<rt class="ruby-text">い</rt></ruby></span></span></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">客<rt class="ruby-text">かく</rt></ruby></span><span class="rubies"><ruby class="base-kanji">星<rt class="ruby-text">せい</rt></ruby></span></span></span><span data-line="1043"></span>＊<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">也<rt class="ruby-text">なり</rt></ruby></span><span data-line="1043"></span>。<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">雖<rt class="ruby-text">いえど</rt></ruby></span><span data-line="1043"></span>も<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">然<rt class="ruby-text">しか</rt></ruby></span><span data-line="1043"></span>り<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">今<rt class="ruby-text">いま</rt></ruby></span><span class="rubies"><ruby class="base-kanji">時<rt class="ruby-text">どき</rt></ruby></span></span></span><span data-line="1043"></span>に<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">当<rt class="ruby-text">あたっ</rt></ruby></span><span data-line="1043"></span>て<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">何<rt class="ruby-text">なん</rt></ruby></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">大<rt class="ruby-text">だい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">名<rt class="ruby-text">みょう</rt></ruby></span></span></span><span data-line="1043"></span>に<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">悪<rt class="ruby-text">あく</rt></ruby></span><span class="rubies"><ruby class="base-kanji">事<rt class="ruby-text">じ</rt></ruby></span></span></span><span data-line="1043"></span>に<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">之<rt class="ruby-text">これ</rt></ruby></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">有<rt class="ruby-text">ある</rt></ruby></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">可<rt class="ruby-text">べ</rt></ruby></span><span data-line="1043"></span>からず<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">末<rt class="ruby-text">まつ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">代<rt class="ruby-text">だい</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">吾<rt class="ruby-text">ご</rt></ruby></span><span class="rubies"><ruby class="base-kanji">朝<rt class="ruby-text">ちょう</rt></ruby></span></span></span><span data-line="1043"></span>の古高家において、<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">次<rt class="ruby-text">し</rt></ruby></span><span class="rubies"><ruby class="base-kanji">第<rt class="ruby-text">だい</rt></ruby></span></span></span><span data-line="1043"></span>に<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">滅<rt class="ruby-text">めっす</rt></ruby></span><span data-line="1043"></span>して<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">終<rt class="ruby-text">おわり</rt></ruby></span><span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">悉<rt class="ruby-text">ことごと</rt></ruby></span><span data-line="1043"></span>く<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">成<rt class="ruby-text">せい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">給<rt class="ruby-text">きゅう</rt></ruby></span></span></span><span data-line="1043"></span>ひに於いて<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">無<rt class="ruby-text">む</rt></ruby></span><span class="rubies"><ruby class="base-kanji">武<rt class="ruby-text">ぶ</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">道<rt class="ruby-text">どう</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">国<rt class="ruby-text">こく</rt></ruby></span></span></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">中<rt class="ruby-text">なか</rt></ruby></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">武<rt class="ruby-text">ぶ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">家<rt class="ruby-text">け</rt></ruby></span></span></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">作<rt class="ruby-text">さ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">法<rt class="ruby-text">ほう</rt></ruby></span></span></span><span data-line="1043"></span>を取失（しっぱい？）。<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">昨<rt class="ruby-text">さく</rt></ruby></span><span class="rubies"><ruby class="base-kanji">日<rt class="ruby-text">じつ</rt></ruby></span></span></span><span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">下<rt class="ruby-text">げ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">人<rt class="ruby-text">にん</rt></ruby></span></span></span><span data-line="1043"></span>かと<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">見<rt class="ruby-text">み</rt></ruby></span><span data-line="1043"></span>れば<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">今日<rt class="ruby-text">きょう</rt></ruby></span><span data-line="1043"></span>は<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">主<rt class="ruby-text">しゅ</rt></ruby></span><span data-line="1043"></span>と<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">成<rt class="ruby-text">な</rt></ruby></span><span data-line="1043"></span>り。<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">女<rt class="ruby-text">おんな</rt></ruby></span><span data-line="1043"></span>が<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">男<rt class="ruby-text">おとこ</rt></ruby></span><span data-line="1043"></span>の<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">出<rt class="ruby-text">いで</rt></ruby></span><span class="rubies"><ruby class="base-kanji">立<rt class="ruby-text">たち</rt></ruby></span></span></span><span data-line="1043"></span>を<span data-line="1043"></span><span class="rubies"><ruby class="base-kanji">仕<rt class="ruby-text">し</rt></ruby></span><span data-line="1043"></span>り<span data-line="1043"></span><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">新<rt class="ruby-text">しん</rt></ruby></span><span class="rubies"><ruby class="base-kanji">家<rt class="ruby-text">け</rt></ruby></span></span></span><span data-line="1043"></span>のだち
+ </div>
+<div class="translation" data-line="1047" style="font-size:12pt;margin-left:1em;margin-bottom:0em;padding-top:0em;padding-bottom:1em;text-indent:-1em;text-justify:inter-ideographic;breakable:False;background-color:lightblue;line-height:1.5em"><span data-line="1048"></span><span class="text-heading" style="font-weight:bold;font-size:12pt;text-indent:-1em;text-indent:0em;padding-top:0em;margin-bottom:0em;padding-bottom:0em;display:block;after:\A \A ">【現代誤訳】</span><span data-line="1048"></span>
+Things that can be determined about the arsenal through astrology, including things about the Contest  (battle?) at Nagasaka Nodoka Mumenmoku<span data-line="1049"></span><br>
+<span data-line="1050"></span><br>
+<span data-line="1051"></span>One: From the 12th year of Eiroku (The year of the snake, <span data-line="1051"></span><em class="em-low1">tsuchinoto-no-mi</em><span data-line="1051"></span>) to the seventh month of following year of the Ox, in the heavens, a star that lets off smoke (a comet?) appeared.  A widely-studied man from Kōshū<span data-line="1051"></span>&#39;<span data-line="1051"></span>s (Shiga Pref.) Ishi-dera was sent for by <span data-line="1051"></span>[<span data-line="1051"></span>Takeda<span data-line="1051"></span>]<span data-line="1051"></span> Shingen from the time he was the age of 31. In the past,  by the flow of clearness (a shooting star?), he had been a fortune-teller. 
+Within that <span data-line="1052"></span>[<span data-line="1052"></span>fortune telling<span data-line="1052"></span>]<span data-line="1052"></span> there was a prophesy(?), and by his ability to tell fortunes, he was(?) called <span data-line="1052"></span>&#8220;the arsenal of prophesies.&#8221;<span data-line="1052"></span>
+His fortune-telling was supported by the True Dharma, and contained both the <span data-line="1053"></span>&#8220;inner texts [of Buddhism]&#8221;<span data-line="1053"></span> and the <span data-line="1053"></span>&#8220;outer [non-Buddhist] texts,&#8221;<span data-line="1053"></span> and if there were not even a little  evil spirits/curses, in the county of Minochi in Shinshū (Nagano Pref.), distributed land <span data-line="1053"></span>[<span data-line="1053"></span>of a value of<span data-line="1053"></span>]<span data-line="1053"></span> a hundred <span data-line="1053"></span>&#8220;strings of cash&#8221;<span data-line="1053"></span> was given <span data-line="1053"></span>[<span data-line="1053"></span>to him<span data-line="1053"></span>]<span data-line="1053"></span> in perpetuity, 
+ </div>
+<div class="notes" data-line="1057" style="margin-left:2em">
+<p class="p noindent" data-line="1058"><span data-line="1058"></span><span class="text-heading" style="font-weight:bold;font-size:12pt;text-indent:-1em;text-indent:0em;padding-top:0em;margin-bottom:0em;padding-bottom:0em;display:block;after:\A \A ;margin-left:-1em">【語釈】</span><span data-line="1058"></span>
+</p>
+<dl class="dl loose" data-line="1060" style="background:hsl(15,80%,85%)">
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">兵<rt class="ruby-text">ひょう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">庫<rt class="ruby-text">ご</rt></ruby></span></span></span>:</dt>
+<p data-line="1060"><span data-line="1060"></span>兵器を納めておくくら。武庫。へいこ。
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><ruby class="base-kanji">長閑<rt class="ruby-text">のどか</rt></ruby></span>:</dt>
+<p data-line="1063"><span data-line="1063"></span>①のんびりと、おちついて静かなさま。ゆっくりと、あわてないさま。源氏物語花宴「―に袖かへすところを」。堤中納言物語「よろづは―にきこえむ」。「―な休日」
+</p>
+<p data-line="1065"><span data-line="1065"></span>②気にかからないさま。心配のないさま。源氏物語帚木「いと―に想ひなされて」
+</p>
+<p data-line="1066"><span data-line="1066"></span>③天気がよくて穏やかなさま。〈春〉。宇津保物語楼上下「日―に」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">召<rt class="ruby-text">めし</rt></ruby></span><span class="rubies"><ruby class="base-kanji">置<rt class="ruby-text">おか</rt></ruby></span></span></span>:</dt>
+<p data-line="1068"><span data-line="1068"></span>①取りよせ、または呼びよせてお側に置く。
+</p>
+<p data-line="1070"><span data-line="1070"></span>②召し捕えて留めておく。
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">江<rt class="ruby-text">こう</rt></ruby></span><span class="rubies"><ruby class="base-kanji">州<rt class="ruby-text">しゅう</rt></ruby></span></span></span>:</dt>
+<p data-line="1072"><span data-line="1072"></span><span class="rubies"><ruby class="base-kanji">近江<rt class="ruby-text">おうみ</rt></ruby></span><span data-line="1072"></span>国の別称。
+</p>
+<p data-line="1074"><span data-line="1074"></span>(アハウミの転。淡水湖の意で琵琶湖を指す) 旧国名。今の滋賀県。江州。
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">易<rt class="ruby-text">えき</rt></ruby></span><span class="rubies"><ruby class="base-kanji">者<rt class="ruby-text">しゃ</rt></ruby></span></span></span>:</dt>
+<p data-line="1076"><span data-line="1076"></span>算木さんぎ・筮竹ぜいちくを使い、易によって占うのを業とする人。売卜者ばいぼくしや。八卦見はつけみ。「大道―」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em">たずさわり（携わる）:</dt>
+<p data-line="1079"><span data-line="1079"></span>①互いに手をとる。連れだつ。万葉集17「思ふどち馬うち群れて―・り出で立ち見れば」
+</p>
+<p data-line="1081"><span data-line="1081"></span>②物にひっかかる。和泉式部集「難波潟みぎはの葦に―・る舟とはなしにある我が身かな」
+</p>
+<p data-line="1082"><span data-line="1082"></span>③ある事柄に関係をもつ。従事する。徒然草「世俗の事に―・りて生涯を暮すは下愚の人なり」。「教育に―・る」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">内<rt class="ruby-text">ない</rt></ruby></span><span class="rubies"><ruby class="base-kanji">典<rt class="ruby-text">てん</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">外<rt class="ruby-text">げ</rt></ruby></span></span></span><span class="rubies"><ruby class="base-kanji">典<rt class="ruby-text">てん</rt></ruby></span></span></span>:</dt>
+<p data-line="1084"><span data-line="1084"></span>仏教関係の典籍を<span data-line="1084"></span>&lt;<span data-line="1084"></span>内典<span data-line="1084"></span>&gt;<span data-line="1084"></span>，仏教以外の典籍を<span data-line="1084"></span>&lt;<span data-line="1084"></span>外典<span data-line="1084"></span>&gt;<span data-line="1084"></span>という．外典は，たとえばインドにおいては四ヴェーダ，中国においては老荘儒墨などの百家の書をいう．内典は，仏教の典籍の総称であることから，唐の<span data-line="1084"></span><span class="rubies"><ruby class="base-kanji">道宣<rt class="ruby-text">どうせん</rt></ruby></span><span data-line="1084"></span>著『大唐内典録』，東大寺の<span data-line="1084"></span><span class="rubies"><ruby class="base-kanji">凝然<rt class="ruby-text">ぎょうねん</rt></ruby></span><span data-line="1084"></span>述『<span data-line="1084"></span><span class="rubies"><ruby class="base-kanji">内典塵露章<rt class="ruby-text">ないてんじんろしょう</rt></ruby></span><span data-line="1084"></span>』などのように書名とするものも多い．なお，類語に<span data-line="1084"></span>&lt;<span data-line="1084"></span>内教・外教<span data-line="1084"></span>&gt;<span data-line="1084"></span>がある．「純雑の義，内典のみにかぎらず，外典の中にその例はなはだ多し」〔本願念仏集〕「<span data-line="1084"></span><span class="rubies"><ruby class="base-kanji">内教<rt class="ruby-text">ほとけのみのり</rt></ruby></span><span data-line="1084"></span>を高麗の<span data-line="1084"></span><span class="rubies"><ruby class="base-kanji">僧<rt class="ruby-text">ほふし</rt></ruby></span><span data-line="1084"></span>の慧慈に習ひ，<span data-line="1084"></span><span class="rubies"><ruby class="base-kanji">外典<rt class="ruby-text">とつふみ</rt></ruby></span><span data-line="1084"></span>を<span data-line="1084"></span><span class="rubies"><ruby class="base-kanji">博士覚<rt class="ruby-text">かくか</rt></ruby></span><span data-line="1084"></span>に学びたまふ」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><ruby class="base-kanji">聊<rt class="ruby-text">いささ</rt></ruby></span>かも:</dt>
+<p data-line="1087"><span data-line="1087"></span>(下に否定の語を伴って) すこしも。「その名声は―損われなかった」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">邪<rt class="ruby-text">ざ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">気<rt class="ruby-text">げ</rt></ruby></span></span></span>:</dt>
+<p data-line="1090"><span data-line="1090"></span>(ザはジャの直音化。ケは呉音) もののけ。たたり。じゃき。源氏物語柏木「―なんどの、人の心たぶろかして」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">百<rt class="ruby-text">ひゃっ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">貫<rt class="ruby-text">けん</rt></ruby></span></span></span>:</dt>
+<p data-line="1094"><span data-line="1094"></span>①1貫の百倍。
+</p>
+<p data-line="1096"><span data-line="1096"></span>②目方・金銭の多いこと。また、価値あるものにたとえていう語。
+</p>
+<p data-line="1097"><span data-line="1097"></span>③(副詞的に) はるかに。ずっと。浄、鎌倉三代記「畠なぶりが―まし」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">知<rt class="ruby-text">ち</rt></ruby></span><span class="rubies"><ruby class="base-kanji">行<rt class="ruby-text">ぎょう</rt></ruby></span></span></span>:</dt>
+<p data-line="1099"><span data-line="1099"></span>③中世・近世、上位者から与えられた所職や所領を支配すること。また、家臣に恩給された領地。栂尾明恵上人遺訓「寺領を―し」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">永<rt class="ruby-text">えい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">代<rt class="ruby-text">たい</rt></ruby></span></span></span>:</dt>
+<p data-line="1102"><span data-line="1102"></span>永世。とこしえ。傾城禁短気「四匁する物を、四匁すると言うては、―人の気には入られず」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">宛<rt class="ruby-text">あて</rt></ruby></span><span class="rubies"><ruby class="base-kanji">行<rt class="ruby-text">おこな</rt></ruby></span></span></span>わるる:</dt>
+<p data-line="1105"><span data-line="1105"></span>所領や禄物を給与すること。あてがい。
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em">く‐り【庫裏・庫裡】:</dt>
+<p data-line="1107"><span data-line="1107"></span>①寺の台所。庫院。
+</p>
+<p data-line="1109"><span data-line="1109"></span>②転じて、住職や家族の居間。義経記5「―の傍に法師二人児三人居たり」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><ruby class="base-kanji">謹<rt class="ruby-text">つつし</rt></ruby></span>んで:</dt>
+<p data-line="1111"><span data-line="1111"></span>(ツツシミテの音便) 恭敬の意を表して。うやうやしく。
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">言<rt class="ruby-text">いい</rt></ruby></span><span class="rubies"><ruby class="base-kanji">上<rt class="ruby-text">のば</rt></ruby></span></span></span>す:</dt>
+<p data-line="1114"><span data-line="1114"></span>都へ便りなどをやる。天草本平家物語「都の守護に上せられた北条のもとへ鎌倉殿―・せらるるは」
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><ruby class="base-kanji">抑<rt class="ruby-text">そも</rt></ruby></span>:</dt>
+<p data-line="1117"><span data-line="1117"></span>(代名詞ソに助詞モを添えた語) 
+</p>
+<p data-line="1119"><span data-line="1119"></span>①上を受けて下を説き起すのに用いる語。それというのも。宇津保物語俊蔭「年頃知らでまどはかしつるもわが罪にあらず、―親に従ひしなり」
+</p>
+<p data-line="1120"><span data-line="1120"></span>②改めて、文を説き起すのに用いる語。それにしても。一体。そもそも。謡、熊野ゆや
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">客<rt class="ruby-text">かく</rt></ruby></span><span class="rubies"><ruby class="base-kanji">星<rt class="ruby-text">せい</rt></ruby></span></span></span>:</dt>
+<p data-line="1122"><span data-line="1122"></span>恒星に対していう星で、一定の所に常には見えず一時的に現れる星。彗星・新星など。きゃくせい。きゃくしょう。
+</p>
+<dt class="dt noindent dl-li loose-li" style="text-indent:0em;font-weight:bold;display:inline;font-family:Noto Sans;font-weight:bold;margin-top:0em;margin-left:-1em;margin-left:0em"><span class="rubies"><span class="spaced-out-rubies"><span class="rubies"><ruby class="base-kanji">末<rt class="ruby-text">まつ</rt></ruby></span><span class="rubies"><ruby class="base-kanji">代<rt class="ruby-text">だい</rt></ruby></span></span></span>:</dt>
+<p data-line="1125"><span data-line="1125"></span>②死んだ後の世。後世。
+</p></dl></div><!--  Template
+
+-------------------------------------------------------------------------
+
+【原文】
+
+【訓読】
+
+【翻訳】
+
+~ Begin Notes
+
+* :
+  : 
+
+* :
+  : 
+
+* :
+  : 
+
+* :
+  : 
+
+~ End Notes
+
+-->
+
+<span data-line=""></span></div>
+</body>
+
+</html>
